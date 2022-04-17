@@ -7,7 +7,7 @@ import logo from '../../images/logo.png';
 const Header = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+      <Navbar className="py-4 fs-4" collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} alt="" width={40} />
@@ -16,7 +16,7 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="home">Home</Nav.Link>
-              <Nav.Link as={Link} to="packages">Packages</Nav.Link>
+              <Nav.Link as={Link} to="#packages">Packages</Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item as={Link} to="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="#action/3.2">

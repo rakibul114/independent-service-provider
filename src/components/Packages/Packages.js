@@ -12,11 +12,11 @@ const Packages = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div id="packages" className="container">
       <div>
-        <h1 className="text-primary text-center">TOP PACKAGES</h1>
+        <h1 className="text-primary text-center mt-4 fw-bold">TOP PACKAGES</h1>
         <p className="text-center">BEST TRAVEL PACKAGES AVAILABLE</p>
-        <hr />
+        <hr className="horizon-bar" />
       </div>
       <div className="card-design">
         {packages.map((pg) => (

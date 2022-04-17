@@ -8,7 +8,7 @@ import Login from "./components/Login/Login";
 import PackageDetail from "./components/PackageDetail/PackageDetail";
 import Packages from "./components/Packages/Packages";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
-import SignUp from "./components/SignUp/SignUp";
+import Register from "./components/Register/Register";
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path='/package/:packageId' element={<PackageDetail></PackageDetail>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>

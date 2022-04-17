@@ -3,3 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
 }
+.horizon-bar{
+    width: 10%;
+    margin: 0 auto;
+}

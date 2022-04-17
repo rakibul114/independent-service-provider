@@ -10,11 +10,11 @@ const Package = (props) => {
   };
 
     return (
-      <div className="single-card">
+      <div className="single-card shadow-lg mx-auto my-5">
         <div>
           <img className="card-img" src={picture} alt="" />
-          <div>
-            <p>{name}</p>
+          <div className='px-3'>
+            <p className='fs-4 fw-bold'>{name}</p>
             <p>
               Price: {price} <small>BDT</small>
             </p>
