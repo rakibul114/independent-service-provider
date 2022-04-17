@@ -1,12 +1,17 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const PackageDetail = () => {
     const { packageId } = useParams();
     return (
-        <div>
-            <h2>Package Id: {packageId} </h2>
+      <div>
+        <h2>Package Id: {packageId} </h2>
+        <div className='text-center my-5'>
+          <Link to="/checkout">
+            <button className="btn btn-primary">Proceed Checkout</button>
+          </Link>
         </div>
+      </div>
     );
 };
 

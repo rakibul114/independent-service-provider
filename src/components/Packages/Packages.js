@@ -12,7 +12,7 @@ const Packages = () => {
   }, []);
 
   return (
-    <div id="packages" className="container">
+    <div className="container">
       <div>
         <h1 className="text-primary text-center mt-4 fw-bold">TOP PACKAGES</h1>
         <p className="text-center">BEST TRAVEL PACKAGES AVAILABLE</p>
