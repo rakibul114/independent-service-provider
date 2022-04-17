@@ -14,8 +14,8 @@ const Packages = () => {
   return (
     <div className="container">
       <div>
-        <h1 className="">TOP PACKAGES</h1>
-        <p>BEST TRAVEL PACKAGES AVAILABLE</p>
+        <h1 className="text-primary text-center">TOP PACKAGES</h1>
+        <p className="text-center">BEST TRAVEL PACKAGES AVAILABLE</p>
         <hr />
       </div>
       <div className="card-design">

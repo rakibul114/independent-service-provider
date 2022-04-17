@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Package.css';
 
 const Package = (props) => {   
-    const {name, picture, desc, price } = props.pg;
+  const { id, name, picture, desc, price } = props.pg;
+  const navigate = useNavigate();
+  const navigateToPackageDetail = id => {
+    navigate(`/package/${id}`);
+  };
 
     return (
       <div className="single-card">
@@ -14,7 +19,7 @@ const Package = (props) => {
               Price: {price} <small>BDT</small>
             </p>
             <p>{desc}</p>
-            <button>Details</button>
+            <button onClick={() => navigateToPackageDetail(id)}>Details</button>
           </div>
         </div>
       </div>

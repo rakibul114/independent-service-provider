@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import banner from '../../images/cover.jpg';
 import Packages from '../Packages/Packages';
 
 import slide1 from '../../images/slide1.jpg';
@@ -16,11 +15,7 @@ const Home = () => {
         <div>
           <Carousel>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={slide1}
-                alt="First slide"
-              />
+              <img className="d-block w-100" src={slide1} alt="First slide" />
               <Carousel.Caption>
                 <h3>First slide label</h3>
                 <p>
@@ -29,11 +24,7 @@ const Home = () => {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={slide2}
-                alt="Second slide"
-              />
+              <img className="d-block w-100" src={slide2} alt="Second slide" />
 
               <Carousel.Caption>
                 <h3>Second slide label</h3>
@@ -41,11 +32,7 @@ const Home = () => {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={slide3}
-                alt="Third slide"
-              />
+              <img className="d-block w-100" src={slide3} alt="Third slide" />
 
               <Carousel.Caption>
                 <h3>Third slide label</h3>
@@ -58,10 +45,16 @@ const Home = () => {
           </Carousel>
         </div>
         <Packages></Packages>
-        <div className="my-6">
-          <Link to="/packages" element={<Packages></Packages>}>
-            Show All Packages
-          </Link>
+        <div className='text-center mb-5'>
+          <button type="button" class="btn btn-primary">
+            <Link
+              className="text-white text-decoration-none"
+              to="/packages"
+              element={<Packages></Packages>}
+            >
+              Show All Packages
+            </Link>
+          </button>
         </div>
       </div>
     );

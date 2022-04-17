@@ -18,14 +18,14 @@ const Header = () => {
               <Nav.Link as={Link} to="home">Home</Nav.Link>
               <Nav.Link as={Link} to="packages">Packages</Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="#action/3.2">
                   Another action
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="#action/3.3">
                   Something
                 </NavDropdown.Item>                
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item as={Link} to="#action/3.4">
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
