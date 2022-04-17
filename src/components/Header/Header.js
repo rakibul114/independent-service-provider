@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav className="flex justify-around text-2xl bg-slate-100 py-8 fixed w-full z-50 top-0">
-      <h1 className="font-bold text-3xl">Travel BD</h1>
+      <h1 className="font-bold text-3xl">Moon Travel</h1>
       <div>
         <Link className="ml-6" to="/home">
           Home
