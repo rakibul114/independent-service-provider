@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
+import Blog from "./components/Blog/Blog";
 import Checkout from "./components/Checkout/Checkout";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -38,6 +39,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/testimonial" element={<Testimonial></Testimonial>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
