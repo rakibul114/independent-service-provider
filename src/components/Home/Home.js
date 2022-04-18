@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Packages from '../Packages/Packages';
@@ -6,6 +7,7 @@ import Packages from '../Packages/Packages';
 import slide1 from '../../images/slide1.jpg';
 import slide2 from '../../images/slide2.jpg';
 import slide3 from '../../images/slide3.jpg';
+import Testimonial from '../Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -54,7 +56,10 @@ const Home = () => {
             >
               Show All Packages
             </Link>
-          </button>
+          </button>          
+        </div>
+        <div>
+        <Testimonial></Testimonial>
         </div>
       </div>
     );

@@ -11,6 +11,8 @@ import PackageDetail from "./components/PackageDetail/PackageDetail";
 import Packages from "./components/Packages/Packages";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Register from "./components/Register/Register";
+import Testimonial from "./components/Testimonial/Testimonial";
+
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/testimonial" element={<Testimonial></Testimonial>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
