@@ -12,6 +12,7 @@ const Register = () => {
   const nameRef = useRef('');
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const confirmPasswordRef = useRef('');
   const navigate = useNavigate();
 
   const handleRegister = (event) => {
@@ -19,8 +20,9 @@ const Register = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+    const confirmPassword = confirmPasswordRef.current.value;
     
-    createUserWithEmailAndPassword(email, password);
+    createUserWithEmailAndPassword(email, password, confirmPassword);
   };
 
   const navigateToLogin = (event) => {
@@ -54,9 +56,6 @@ const Register = () => {
             placeholder="Enter email"
             required
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -68,6 +67,17 @@ const Register = () => {
             required
           />
         </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Confirm Password</Form.Label>
+          <Form.Control
+            ref={confirmPasswordRef}
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
