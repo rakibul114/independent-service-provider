@@ -1,9 +1,11 @@
 import React from 'react';
+import './PageNotFound.css';
+import page404 from '../../images/404.png';
 
 const PageNotFound = () => {
     return (
         <div>
-            <h1>Page not found 404</h1>
+            <img className='page-not-found' src={page404} alt="" />
         </div>
     );
 };

@@ -23,25 +23,28 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
+    verifyEmail();
     
     if (password !== confirmPassword) {
       setError("Your two password did not match");
       return;
     }
-
-    createUserWithEmailAndPassword(email, password);    
+    
+    createUserWithEmailAndPassword(email, password);
+    
+    console.log(email);
   };
 
   const navigateToLogin = (event) => {
     navigate("/login");
   };
 
-  // const verifyEmail = () => {
-  //   sendEmailVerification(auth.currentUser)
-  //     .then(() => {
-  //       console.log('Email verification sent');
-  //     });
-  // };
+  const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser)
+      .then(() => {
+        console.log('Email verification sent');
+      });
+  };
 
   // Redirect condition
   if (user) {
