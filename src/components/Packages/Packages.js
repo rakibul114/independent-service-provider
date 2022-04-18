@@ -18,11 +18,13 @@ const Packages = () => {
         <p className="text-center">BEST TRAVEL PACKAGES AVAILABLE</p>
         <hr className="horizon-bar" />
       </div>
-      <div className="card-design">
-        {packages.map((pg) => (
-          <Package key={pg.id} pg={pg}></Package>
-        ))}
-      </div>
+      
+        <div className="card-design">
+          {packages.map((pg) => (
+            <Package key={pg.id} pg={pg}></Package>
+          ))}
+        </div>
+      
     </div>
   );
 };

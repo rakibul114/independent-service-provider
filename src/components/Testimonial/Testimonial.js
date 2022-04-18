@@ -19,7 +19,8 @@ const Testimonial = () => {
             data-bs-ride="carousel"
           >
             <div className="carousel-indicators">
-              <button type="button"
+              <button
+                type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to="0"
                 class="active"
@@ -32,7 +33,6 @@ const Testimonial = () => {
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
               ></button>
-              
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
@@ -43,10 +43,11 @@ const Testimonial = () => {
                         <img src={user1} alt="" />
                       </div>
                       <div className="img-text">
-                        <h2>Person One</h2>
+                        <h2>Monir Hossain</h2>
                         <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
+                          The expert tips and on time delivery of vouchers along
+                          with timely updates - each and everything was taken
+                          care of!
                         </p>
                       </div>
                     </div>
@@ -57,10 +58,11 @@ const Testimonial = () => {
                         <img src={user2} alt="" />
                       </div>
                       <div className="img-text">
-                        <h2>Person Two</h2>
+                        <h2>Afroza Khatun</h2>
                         <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
+                          His service is really great. I caught everything on
+                          time from beginning to the end. I strongly suggest to
+                          everyone to test his travel management.
                         </p>
                       </div>
                     </div>
@@ -71,57 +73,12 @@ const Testimonial = () => {
                         <img src={user3} alt="" />
                       </div>
                       <div className="img-text">
-                        <h2>Person Three</h2>
+                        <h2>Shormili Begum</h2>
                         <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="carousel-item">
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img src={user4} alt="" />
-                      </div>
-                      <div className="img-text">
-                        <h2>Person Four</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img src={user5} alt="" />
-                      </div>
-                      <div className="img-text">
-                        <h2>Person Five</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="single-box">
-                      <div className="img-area">
-                        <img src={user6} alt="" />
-                      </div>
-                      <div className="img-text">
-                        <h2>Person Six</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Perferendis, aliquam!
+                          I am really please to make a short tour with Moon
+                          Travel. Rakib is really very helpful to provide any
+                          type of information. I highly recommend to anyone to
+                          explore his service.
                         </p>
                       </div>
                     </div>

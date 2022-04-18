@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import './Register.css';
 import auth from '../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [error, setError] = useState('');
+  const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth);
 
   const nameRef = useRef('');
@@ -22,12 +24,24 @@ const Register = () => {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     
-    createUserWithEmailAndPassword(email, password, confirmPassword);
+    if (password !== confirmPassword) {
+      setError("Your two password did not match");
+      return;
+    }
+
+    createUserWithEmailAndPassword(email, password);    
   };
 
   const navigateToLogin = (event) => {
     navigate("/login");
   };
+
+  // const verifyEmail = () => {
+  //   sendEmailVerification(auth.currentUser)
+  //     .then(() => {
+  //       console.log('Email verification sent');
+  //     });
+  // };
 
   // Redirect condition
   if (user) {
@@ -81,11 +95,12 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
+        <p style={{color:'red'}}>{error}</p>
         <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
-      <p className="mt-2">
+      <p className="mt-3">
         Already have an account?{" "}
         <Link
           to="/login"
